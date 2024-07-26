@@ -6,6 +6,7 @@ public class BigMarioVisuals : MonoBehaviour {
     private const string MARIO_RUN = "Running";
     private const string MARIO_RUN_MAX_SPEED = "MaxSpeed";
     private const string MARIO_JUMP = "Jumping";
+    private const string MARIO_BREAK = "Breaking";
 
     [SerializeField] private BigMarioMovement _bigMarioMovement;
     [SerializeField] private Animator _animator;
@@ -17,16 +18,23 @@ public class BigMarioVisuals : MonoBehaviour {
         _bigMarioMovement.OnRunMaxSpeed += BigMarioMovement_OnRunMaxSpeed;
         _bigMarioMovement.OnChangeDirection += BigMarioMovement_OnChangeDirection;
         _bigMarioMovement.OnJumpChange += BigMarioMovement_OnJumpChange;
+        _bigMarioMovement.OnBreaking += BigMarioMovement_OnBreaking;
+    }
+
+    private void BigMarioMovement_OnBreaking(object sender, System.EventArgs e) {
+        _animator.SetBool(MARIO_BREAK, true);
     }
 
     private void BigMarioMovement_OnJumpChange(object sender, bool isMarioJumping) {
         _animator.SetBool(MARIO_JUMP, isMarioJumping);
+        _animator.SetBool(MARIO_BREAK, false);
     }
 
     private void BigMarioMovement_OnRun(object sender, float animationSpeed) {
         _animator.speed = Mathf.Max(1.0f, animationSpeed);
         _animator.SetBool(MARIO_RUN, true);
         _animator.SetBool(MARIO_RUN_MAX_SPEED, false);
+        _animator.SetBool(MARIO_BREAK, false);
     }
 
     private void BigMarioMovement_OnRunMaxSpeed(object sender, float animationSpeed) {
@@ -38,9 +46,11 @@ public class BigMarioVisuals : MonoBehaviour {
     private void BigMarioMovement_OnStop(object sender, System.EventArgs e) {
         _animator.SetBool(MARIO_RUN, false);
         _animator.SetBool(MARIO_RUN_MAX_SPEED, false);
+        _animator.SetBool(MARIO_BREAK, false);
     }
 
     private void BigMarioMovement_OnChangeDirection(object sender, bool isWalkingRight) {
         _spriteRenderer.flipX = !isWalkingRight;
+        _animator.SetBool(MARIO_BREAK, false);
     }
 }
