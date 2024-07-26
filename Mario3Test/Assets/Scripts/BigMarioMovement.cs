@@ -15,6 +15,7 @@ public class BigMarioMovement : MonoBehaviour
 
     public event EventHandler OnStop;
     public event EventHandler OnBreaking;
+    public event EventHandler OnCrouching;
     public event EventHandler<bool> OnChangeDirection;
     public event EventHandler<bool> OnJumpChange;
     public event EventHandler<float> OnRun;
@@ -29,6 +30,7 @@ public class BigMarioMovement : MonoBehaviour
     private bool _isJumpPressed;
     private bool _isWalkingRight;
     private bool _isBreaking;
+    private bool _isCrouching;
 
     private void Start() {
         _input.OnJumpAction += OnJumpAction;
@@ -81,14 +83,17 @@ public class BigMarioMovement : MonoBehaviour
 
     private void HandleHorizontalMovement() {
         Vector2 inputVector = _input.GetMovementVectorNormalized();
-        float moveAmount = inputVector.x;
+        float moveAmountY = inputVector.y;
+        float moveAmountX = inputVector.x;
         
-        if (moveAmount > 0.0f || moveAmount < 0.0f) {
-            _currentSpeed += moveAmount * Time.deltaTime * (_isRuning ? _runAcceleration : _walkAcceleration);
+        _isCrouching = !_isJumping && moveAmountY < -0.5 ;
+
+        if (!_isCrouching && (moveAmountX > 0.0f || moveAmountX < 0.0f)) {
+            _currentSpeed += moveAmountX * Time.deltaTime * (_isRuning ? _runAcceleration : _walkAcceleration);
             _currentSpeed = _currentSpeed > 0 ?
                 Mathf.Min(_currentSpeed, _isRuning ? _runSpeed : _walkSpeed) :
                 Mathf.Max(_currentSpeed, _isRuning ? -_runSpeed : -_walkSpeed);
-            _isBreaking = _isRuning && _currentSpeed > 0.0f && moveAmount < 0.0f || _currentSpeed < 0.0f && moveAmount > 0.0f;
+            _isBreaking = _isRuning && _currentSpeed > 0.0f && moveAmountX < 0.0f || _currentSpeed < 0.0f && moveAmountX > 0.0f;
         } else if (_currentSpeed > 0.1f) {
             // Natural Breaking
             _currentSpeed = Mathf.Max(0.0f, _currentSpeed - Time.deltaTime * _breakForce);
@@ -102,7 +107,7 @@ public class BigMarioMovement : MonoBehaviour
         }
 
         transform.position += Vector3.right * _currentSpeed * Time.deltaTime;
-        _isWalking = moveAmount != 0.0f;
+        _isWalking = moveAmountX != 0.0f;
     }
 
     private void OnJumpAction(object sender, EventArgs e) {
@@ -133,7 +138,9 @@ public class BigMarioMovement : MonoBehaviour
     private void HandleEvents() {
         float currentSpeedAbs = Mathf.Abs(_currentSpeed);
 
-        if(_isBreaking) {
+        if(_isCrouching) {
+            OnCrouching?.Invoke(this, EventArgs.Empty);
+        } else if(_isBreaking) {
             OnBreaking?.Invoke(this, EventArgs.Empty);
         } else if (currentSpeedAbs >= _runSpeed) {
             OnRunMaxSpeed?.Invoke(this, currentSpeedAbs);
