@@ -14,6 +14,7 @@ public class BigMarioMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D _rigidbody2D;
 
     public event EventHandler OnStop;
+    public event EventHandler<bool> OnChangeDirection;
     public event EventHandler<float> OnRun;
     public event EventHandler<float> OnRunMaxSpeed;
 
@@ -24,6 +25,7 @@ public class BigMarioMovement : MonoBehaviour
     private bool _isRuning;
     private bool _isJumping;
     private bool _isJumpPressed;
+    private bool _isWalkingRight;
 
     private void Start() {
         _input.OnJumpAction += OnJumpAction;
@@ -34,6 +36,7 @@ public class BigMarioMovement : MonoBehaviour
         _isRuning = false;
         _isJumping = false;
         _isJumpPressed = false;
+        _isWalkingRight = true;
         _currentSpeed = 0.0f;
         _jumpExtraTime = 0.0f;
     }
@@ -127,6 +130,11 @@ public class BigMarioMovement : MonoBehaviour
             OnRun?.Invoke(this, currentSpeedAbs);
         } else {
             OnStop?.Invoke(this, EventArgs.Empty);
+        }
+
+        if (_currentSpeed < 0 && _isWalkingRight || _currentSpeed > 0 && !_isWalkingRight) {
+            _isWalkingRight = _currentSpeed > 0;
+            OnChangeDirection?.Invoke(this, _isWalkingRight);
         }
     }
 

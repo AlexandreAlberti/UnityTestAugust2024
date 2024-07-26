@@ -632,6 +632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bigMarioMovement: {fileID: 208272627}
   _animator: {fileID: 208272629}
+  _spriteRenderer: {fileID: 694369241}
 --- !u!1 &406561925
 GameObject:
   m_ObjectHideFlags: 0
