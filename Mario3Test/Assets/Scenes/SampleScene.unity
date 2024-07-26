@@ -278,7 +278,7 @@ Transform:
   m_GameObject: {fileID: 72294084}
   serializedVersion: 2
   m_LocalRotation: {x: 1e-45, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -134.82555, y: -31.994732, z: -1.0304008}
+  m_LocalPosition: {x: -282.55, y: -14.37, z: -1.0304008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -422,6 +422,8 @@ GameObject:
   - component: {fileID: 208272626}
   - component: {fileID: 208272628}
   - component: {fileID: 208272627}
+  - component: {fileID: 208272629}
+  - component: {fileID: 208272630}
   m_Layer: 0
   m_Name: Mario
   m_TagString: Untagged
@@ -574,15 +576,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b166552fa3dc4c498333a2fef092aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
-  walkAcceleration: 20
-  runSpeed: 12
-  runAcceleration: 20
-  breakForce: 10
-  jumpForce: 10
-  jumpExtraTimeMax: 0.4
-  input: {fileID: 208272628}
-  rigidbody2D: {fileID: 208272625}
+  _walkSpeed: 5
+  _walkAcceleration: 20
+  _runSpeed: 12
+  _runAcceleration: 15
+  _breakForce: 10
+  _jumpForce: 10
+  _jumpExtraTimeMax: 0.4
+  _input: {fileID: 208272628}
+  _rigidbody2D: {fileID: 208272625}
 --- !u!114 &208272628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +597,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e49e3c71bfb514fba32992e3958f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &208272629
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208272622}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 212bb267ac4836045a3ba9d6ba6d0536, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &208272630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208272622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3747ec610311c9a49879ab91b4f10229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bigMarioMovement: {fileID: 208272627}
+  _animator: {fileID: 208272629}
 --- !u!1 &406561925
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,7 +657,7 @@ Transform:
   m_GameObject: {fileID: 406561925}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.875546, y: 25.624733, z: -0.9695992}
+  m_LocalPosition: {x: 186.6, y: 8, z: -0.9695992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -761,7 +798,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -128.20615, y: -26.124733, z: -1.0304008}
+  m_LocalPosition: {x: -275.9306, y: -8.5, z: -1.0304008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
