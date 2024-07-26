@@ -5,6 +5,7 @@ using UnityEngine;
 public class BigMarioVisuals : MonoBehaviour {
     private const string MARIO_RUN = "Running";
     private const string MARIO_RUN_MAX_SPEED = "MaxSpeed";
+    private const string MARIO_JUMP = "Jumping";
 
     [SerializeField] private BigMarioMovement _bigMarioMovement;
     [SerializeField] private Animator _animator;
@@ -15,6 +16,11 @@ public class BigMarioVisuals : MonoBehaviour {
         _bigMarioMovement.OnRun += BigMarioMovement_OnRun;
         _bigMarioMovement.OnRunMaxSpeed += BigMarioMovement_OnRunMaxSpeed;
         _bigMarioMovement.OnChangeDirection += BigMarioMovement_OnChangeDirection;
+        _bigMarioMovement.OnJumpChange += BigMarioMovement_OnJumpChange;
+    }
+
+    private void BigMarioMovement_OnJumpChange(object sender, bool isMarioJumping) {
+        _animator.SetBool(MARIO_JUMP, isMarioJumping);
     }
 
     private void BigMarioMovement_OnRun(object sender, float animationSpeed) {

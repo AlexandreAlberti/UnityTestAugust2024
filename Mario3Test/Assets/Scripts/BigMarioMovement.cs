@@ -15,6 +15,7 @@ public class BigMarioMovement : MonoBehaviour
 
     public event EventHandler OnStop;
     public event EventHandler<bool> OnChangeDirection;
+    public event EventHandler<bool> OnJumpChange;
     public event EventHandler<float> OnRun;
     public event EventHandler<float> OnRunMaxSpeed;
 
@@ -65,6 +66,7 @@ public class BigMarioMovement : MonoBehaviour
         if (!_isJumping && _isJumpPressed) {
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * _jumpForce);
             _isJumping = true;
+            OnJumpChange?.Invoke(this, true);
             _jumpExtraTime = 0.0f;
         } else if (_isJumping && _isJumpPressed) {
             _jumpExtraTime += Time.deltaTime;
@@ -118,6 +120,7 @@ public class BigMarioMovement : MonoBehaviour
 
         if (floor) {
             _isJumping = false;
+            OnJumpChange?.Invoke(this, false);
         }
     }
 
