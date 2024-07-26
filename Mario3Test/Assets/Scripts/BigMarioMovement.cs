@@ -68,6 +68,12 @@ public class BigMarioMovement : MonoBehaviour
     }
 
     private void HandleVerticalMovement() {
+
+        if (_rigidbody2D.velocity.y < 0.0f) {
+            // Falling, do nothing
+            return;
+        }
+
         if (!_isJumping && _isJumpPressed) {
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * _jumpForce);
             _isJumping = true;
@@ -128,15 +134,6 @@ public class BigMarioMovement : MonoBehaviour
         _isJumpPressed = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        Floor floor = collision.transform.GetComponent<Floor>();
-
-        if (floor) {
-            _isJumping = false;
-            OnJumpChange?.Invoke(this, false);
-        }
-    }
-
     private void HandleEvents() {
         float currentSpeedAbs = Mathf.Abs(_currentSpeed);
 
@@ -158,4 +155,12 @@ public class BigMarioMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision) {
+        Floor floor = collision.transform.GetComponent<Floor>();
+
+        if (floor) {
+            _isJumping = false;
+            OnJumpChange?.Invoke(this, false);
+        }
+    }
 }
