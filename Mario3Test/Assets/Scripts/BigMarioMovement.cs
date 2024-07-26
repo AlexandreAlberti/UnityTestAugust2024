@@ -73,6 +73,8 @@ public class BigMarioMovement : MonoBehaviour
             _isJumping = true;
             OnJumpChange?.Invoke(this, true);
             _jumpExtraTime = 0.0f;
+        } else if (_isJumping && !_isJumpPressed) {
+            _jumpExtraTime = _jumpExtraTimeMax;
         } else if (_isJumping && _isJumpPressed) {
             _jumpExtraTime += Time.deltaTime;
             if (_jumpExtraTime <= _jumpExtraTimeMax) {
