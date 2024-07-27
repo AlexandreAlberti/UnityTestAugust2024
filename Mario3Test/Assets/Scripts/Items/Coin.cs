@@ -15,6 +15,6 @@ public class Coin : ItemInBox {
 
     private void CollectCoin() {
         CoinManager.Instance.IncrementCoinsCounter();
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
