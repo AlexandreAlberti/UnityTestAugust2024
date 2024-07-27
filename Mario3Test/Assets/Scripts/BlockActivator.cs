@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BlockActivator : MonoBehaviour
-{
+public class BlockActivator : MonoBehaviour {
     private const string BLOCK_HIT = "BlockHit";
 
     [SerializeField] Animator _animator;

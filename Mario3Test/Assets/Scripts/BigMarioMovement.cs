@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
 
-public class BigMarioMovement : MonoBehaviour
-{
+public class BigMarioMovement : MonoBehaviour {
     [SerializeField] private float _walkSpeed;
     [SerializeField] private float _walkAcceleration;
     [SerializeField] private float _runSpeed;
@@ -93,8 +92,8 @@ public class BigMarioMovement : MonoBehaviour
         Vector2 inputVector = _input.GetMovementVectorNormalized();
         float moveAmountY = inputVector.y;
         float moveAmountX = inputVector.x;
-        
-        _isCrouching = !_isJumping && moveAmountY < -0.5 ;
+
+        _isCrouching = !_isJumping && moveAmountY < -0.5;
 
         if (!_isCrouching && (moveAmountX > 0.0f || moveAmountX < 0.0f)) {
             _currentSpeed += moveAmountX * Time.deltaTime * (_isRuning ? _runAcceleration : _walkAcceleration);
@@ -137,9 +136,9 @@ public class BigMarioMovement : MonoBehaviour
     private void HandleEvents() {
         float currentSpeedAbs = Mathf.Abs(_currentSpeed);
 
-        if(_isCrouching) {
+        if (_isCrouching) {
             OnCrouching?.Invoke(this, EventArgs.Empty);
-        } else if(_isBreaking) {
+        } else if (_isBreaking) {
             OnBreaking?.Invoke(this, EventArgs.Empty);
         } else if (currentSpeedAbs >= _runSpeed) {
             OnRunMaxSpeed?.Invoke(this, currentSpeedAbs);

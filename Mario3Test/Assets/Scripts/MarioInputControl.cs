@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MarioInputControl : MonoBehaviour
-{
+public class MarioInputControl : MonoBehaviour {
     public event EventHandler OnJumpAction;
     public event EventHandler OnJumpReleasedAction;
     public event EventHandler OnRunAttackAction;
