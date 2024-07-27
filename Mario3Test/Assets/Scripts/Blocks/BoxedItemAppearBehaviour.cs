@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public enum BoxedItemAppearBehaviour
-{
+public enum BoxedItemAppearBehaviour {
+    None,
     GrowAndStay,
     JumpAndAutoCollect
 }

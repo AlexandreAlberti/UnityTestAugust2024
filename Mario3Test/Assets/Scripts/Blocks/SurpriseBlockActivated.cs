@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BlockActivated : MonoBehaviour {
+public class RegularBlockActivated : MonoBehaviour {
     private const string GROW_AND_STAY = "GrowAndStay";
     private const string JUMP_AND_AUTO_COLLECT = "JumpAndAutoCollect";
 
@@ -13,6 +13,9 @@ public class BlockActivated : MonoBehaviour {
                 break;
             case BoxedItemAppearBehaviour.JumpAndAutoCollect:
                 _innerObjectAnimator.SetTrigger(JUMP_AND_AUTO_COLLECT);
+                break;
+            case BoxedItemAppearBehaviour.None:
+            default:
                 break;
         }
     }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BlockActivator : MonoBehaviour {
+public class SurpriseBlockActivator : MonoBehaviour {
     private const string BLOCK_HIT = "BlockHit";
 
     [SerializeField] private Animator _animator;

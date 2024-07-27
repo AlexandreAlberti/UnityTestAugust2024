@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df4b68c6854d3214d9c1a64080f2ee6c, type: 3}
-  m_Name: CoinInBlock
+  m_Name: EmptyBlock
   m_EditorClassIdentifier: 
-  _behaviour: 2
+  _behaviour: 0

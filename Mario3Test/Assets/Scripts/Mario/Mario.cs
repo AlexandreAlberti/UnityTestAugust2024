@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Mario : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private enum MarioState {
+        LittleMario,
+        BigMario,
+        FireMario,
+        RacoonMario
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private MarioState marioState;
+
+    private void Awake() {
+        marioState = MarioState.BigMario;   
+    }
+
+    public bool CanBreakRegularBlocks() {
+        return marioState != MarioState.LittleMario;
     }
 }
