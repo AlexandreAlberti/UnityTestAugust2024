@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3747ec610311c9a49879ab91b4f10229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bigMarioMovement: {fileID: 5886321540375813585}
+  _marioMovement: {fileID: 5886321540375813585}
   _animator: {fileID: 1402661876033856400}
   _spriteRenderer: {fileID: 2020778913467408775}
 --- !u!114 &2496615580982235774

@@ -16,7 +16,7 @@ public class RegularBlockActivator : MonoBehaviour {
                 _itemInBox.gameObject.SetActive(true);
                 _animator.SetTrigger(HIT_AND_SPAWN_ITEM_REGULAR_BLOCK);
             }
-            else if (mario.CanBreakRegularBlocks()) {
+            else if (MarioManager.Instance.CanBreakRegularBlocks()) {
                 _animator.SetTrigger(BREAK_REGULAR_BLOCK);
             } else {
                 _animator.SetTrigger(HIT_REGULAR_BLOCK);

@@ -130,15 +130,15 @@ GameObject:
   - component: {fileID: 4587598659556258678}
   - component: {fileID: 5886321540375813585}
   - component: {fileID: 1402661876033856400}
-  - component: {fileID: 4488864133146119720}
   - component: {fileID: 2496615580982235774}
+  - component: {fileID: 8306181717794198832}
   m_Layer: 0
   m_Name: BigMario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2121122705418612546
 Transform:
   m_ObjectHideFlags: 0
@@ -281,21 +281,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4488864133146119720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8149406316958689417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3747ec610311c9a49879ab91b4f10229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bigMarioMovement: {fileID: 5886321540375813585}
-  _animator: {fileID: 1402661876033856400}
-  _spriteRenderer: {fileID: 2020778913467408775}
 --- !u!114 &2496615580982235774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,4 +293,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17bd56f0b97d42b418529c511686a284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  marioState: 1
+--- !u!114 &8306181717794198832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8149406316958689417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb98a63311be67d41b21663777780ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _marioMovement: {fileID: 5886321540375813585}
+  _animator: {fileID: 1402661876033856400}
+  _spriteRenderer: {fileID: 2020778913467408775}

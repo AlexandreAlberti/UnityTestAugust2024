@@ -31,8 +31,8 @@ public class Mushroom : ItemInBox {
     }
 
     private void MushroomEffect(Mario mario) {
-        if (!mario.CanBreakRegularBlocks()) {
-            // TODO - Trigger Mario Grow Animation
+        if (!MarioManager.Instance.CanBreakRegularBlocks()) {
+            MarioManager.Instance.MushroomPowerUp();
         }
 
         gameObject.SetActive(false); // Deactivate mushroom
