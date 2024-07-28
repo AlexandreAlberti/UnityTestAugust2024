@@ -11,11 +11,7 @@ public class Mario : MonoBehaviour
         RacoonMario
     }
 
-    private MarioState marioState;
-
-    private void Awake() {
-        marioState = MarioState.BigMario;   
-    }
+    [SerializeField] private MarioState marioState;
 
     public bool CanBreakRegularBlocks() {
         return marioState != MarioState.LittleMario;
