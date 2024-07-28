@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 613857088068701546, guid: 18e2d5f23f64fde4d839a450fb076584, type: 3}
+      propertyPath: _prefabToIntantiate
+      value: 
+      objectReference: {fileID: 7201948888824894704, guid: 1a38d8b471e49af459a38dd2f3b5f2bb, type: 3}
     - target: {fileID: 2470513644979560325, guid: 18e2d5f23f64fde4d839a450fb076584, type: 3}
       propertyPath: _itemInBox
       value: 

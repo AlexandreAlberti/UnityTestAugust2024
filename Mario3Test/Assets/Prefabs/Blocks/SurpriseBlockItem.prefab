@@ -562,6 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemInBox: {fileID: 6228662996771986575}
+  _prefabToIntantiate: {fileID: 7201948888824894704, guid: 1a38d8b471e49af459a38dd2f3b5f2bb, type: 3}
 --- !u!1 &9034155431530007882
 GameObject:
   m_ObjectHideFlags: 0
