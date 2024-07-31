@@ -9,7 +9,7 @@ public class MarioMovement : MonoBehaviour {
     [SerializeField] private float _breakForce;
     [SerializeField] protected float _jumpForce;
     [SerializeField] protected float _jumpExtraTimeMax;
-    [SerializeField] private MarioInputControl _input;
+    [SerializeField] protected MarioInputControl _input;
     [SerializeField] protected Rigidbody2D _rigidbody2D;
 
     public event EventHandler OnStop;

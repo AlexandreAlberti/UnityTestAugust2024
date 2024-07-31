@@ -7,12 +7,15 @@ public class MarioVisuals : MonoBehaviour {
     private const string MARIO_BREAK = "Breaking";
     private const string MARIO_CROUCH = "Crouching";
 
-    [SerializeField] private MarioMovement _marioMovement;
+    [SerializeField] protected MarioMovement _marioMovement;
     [SerializeField] protected Animator _animator;
     [SerializeField] private SpriteRenderer _spriteRenderer;
 
+    protected bool _canChangeAnimatorSpeed;
+
     private void Awake() {
         SubsribeToAll();
+        _canChangeAnimatorSpeed = true;
     }
 
     protected void SubsribeToAll() {
@@ -40,7 +43,10 @@ public class MarioVisuals : MonoBehaviour {
     }
 
     private void MarioMovement_OnRun(object sender, float animationSpeed) {
-        _animator.speed = Mathf.Max(1.0f, animationSpeed);
+        if (_canChangeAnimatorSpeed) {
+            _animator.speed = Mathf.Max(1.0f, animationSpeed);
+        }
+
         _animator.SetBool(MARIO_RUN, true);
         _animator.SetBool(MARIO_RUN_MAX_SPEED, false);
         _animator.SetBool(MARIO_BREAK, false);
@@ -48,6 +54,10 @@ public class MarioVisuals : MonoBehaviour {
     }
 
     private void MarioMovement_OnRunMaxSpeed(object sender, float animationSpeed) {
+        if (_canChangeAnimatorSpeed) {
+            _animator.speed = animationSpeed;
+        }
+
         _animator.speed = animationSpeed;
         _animator.SetBool(MARIO_RUN, true);
         _animator.SetBool(MARIO_RUN_MAX_SPEED, true);

@@ -7,6 +7,8 @@ public class TanookiMarioMovement : MarioMovement {
     [SerializeField] private float _softFallImpulse;
     [SerializeField] private float _flyImpulseCooldown;
 
+    public event EventHandler OnAttack;
+
     private bool _isFlyAllowed;
     private bool _isSoftFallAllowed;
     private bool _lastFrameJumpPressed;
@@ -17,6 +19,7 @@ public class TanookiMarioMovement : MarioMovement {
         _isSoftFallAllowed = false;
         _flyImpulseTimer = 0.0f;
         _lastFrameJumpPressed = false;
+        _input.OnRunAttackAction += OnAttackAction;
     }
     protected override void HandleVerticalMovement() {
 
@@ -58,4 +61,9 @@ public class TanookiMarioMovement : MarioMovement {
 
         _lastFrameJumpPressed = _isJumpPressed;
     }
+
+    private void OnAttackAction(object sender, EventArgs e) {
+        OnAttack?.Invoke(this, EventArgs.Empty);
+    }
+
 }
