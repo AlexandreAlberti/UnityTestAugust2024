@@ -5,13 +5,34 @@ public class SurpriseBlockActivator : MonoBehaviour {
 
     [SerializeField] private Animator _animator;
     [SerializeField] private ItemInBox _itemInBox;
+    [SerializeField] private bool _isLateral;
 
     private void OnCollisionEnter2D(Collision2D collision) {
+        if (_isLateral) {
+            return;
+        }
+
         Mario mario = collision.transform.GetComponent<Mario>();
 
         if (mario) {
-            _itemInBox.gameObject.SetActive(true);
-            _animator.SetTrigger(BLOCK_HIT);
+            OnValidContact();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (!_isLateral) {
+            return;
+        }
+
+        TanookiTail tanookiTail = collision.transform.GetComponent<TanookiTail>();
+
+        if (tanookiTail) {
+            OnValidContact();
+        }
+    }
+
+    private void OnValidContact() {
+        _itemInBox.gameObject.SetActive(true);
+        _animator.SetTrigger(BLOCK_HIT);
     }
 }

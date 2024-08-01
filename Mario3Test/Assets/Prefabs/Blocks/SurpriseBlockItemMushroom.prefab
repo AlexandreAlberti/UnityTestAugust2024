@@ -64,10 +64,18 @@ PrefabInstance:
       propertyPath: _boxedItemSO
       value: 
       objectReference: {fileID: 11400000, guid: bb1aca7301592494a851eb46b06ca300, type: 2}
+    - target: {fileID: 8822606137609865630, guid: 18e2d5f23f64fde4d839a450fb076584, type: 3}
+      propertyPath: _itemInBox
+      value: 
+      objectReference: {fileID: 6613260165093711182}
     - target: {fileID: 9034155431530007882, guid: 18e2d5f23f64fde4d839a450fb076584, type: 3}
       propertyPath: m_Name
       value: SurpriseBlockItemMushroom
       objectReference: {fileID: 0}
+    - target: {fileID: 9111338877279005622, guid: 18e2d5f23f64fde4d839a450fb076584, type: 3}
+      propertyPath: _itemInBox
+      value: 
+      objectReference: {fileID: 6613260165093711182}
     - target: {fileID: 9204833678050689745, guid: 18e2d5f23f64fde4d839a450fb076584, type: 3}
       propertyPath: m_IsActive
       value: 0

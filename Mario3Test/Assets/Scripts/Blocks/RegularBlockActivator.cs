@@ -7,20 +7,40 @@ public class RegularBlockActivator : MonoBehaviour {
 
     [SerializeField] private Animator _animator;
     [SerializeField] private ItemInBox _itemInBox;
+    [SerializeField] private bool _isLateral;
 
     private void OnCollisionEnter2D(Collision2D collision) {
+        if (_isLateral) {
+            return;
+        }
+
         Mario mario = collision.transform.GetComponent<Mario>();
 
         if (mario) {
-            if (_itemInBox) {
-                _itemInBox.gameObject.SetActive(true);
-                _animator.SetTrigger(HIT_AND_SPAWN_ITEM_REGULAR_BLOCK);
-            }
-            else if (MarioManager.Instance.CanBreakRegularBlocks()) {
-                _animator.SetTrigger(BREAK_REGULAR_BLOCK);
-            } else {
-                _animator.SetTrigger(HIT_REGULAR_BLOCK);
-            }
+            OnValidContact();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (!_isLateral) {
+            return;
+        }
+
+        TanookiTail tanookiTail = collision.transform.GetComponent<TanookiTail>();
+
+        if (tanookiTail) {
+            OnValidContact();
+        }
+    }
+
+    private void OnValidContact() {
+        if (_itemInBox) {
+            _itemInBox.gameObject.SetActive(true);
+            _animator.SetTrigger(HIT_AND_SPAWN_ITEM_REGULAR_BLOCK);
+        } else if (MarioManager.Instance.CanBreakRegularBlocks()) {
+            _animator.SetTrigger(BREAK_REGULAR_BLOCK);
+        } else {
+            _animator.SetTrigger(HIT_REGULAR_BLOCK);
         }
     }
 }

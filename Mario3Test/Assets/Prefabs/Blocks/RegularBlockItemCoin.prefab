@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: _itemInBox
       value: 
       objectReference: {fileID: 2993393885488693453}
+    - target: {fileID: 2357765628406949693, guid: 54d0fc0d579ec2d4bafcf6e32e6a5f98, type: 3}
+      propertyPath: _itemInBox
+      value: 
+      objectReference: {fileID: 2993393885488693453}
+    - target: {fileID: 2851790907486636578, guid: 54d0fc0d579ec2d4bafcf6e32e6a5f98, type: 3}
+      propertyPath: _itemInBox
+      value: 
+      objectReference: {fileID: 2993393885488693453}
     - target: {fileID: 6267733856432464019, guid: 54d0fc0d579ec2d4bafcf6e32e6a5f98, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
