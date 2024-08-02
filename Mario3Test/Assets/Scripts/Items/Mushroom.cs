@@ -2,11 +2,6 @@ using System;
 using UnityEngine;
 
 public class Mushroom : ItemInBox {
-
-    [SerializeField] private Rigidbody2D _rigidbody2D;
-    [SerializeField] private CircleCollider2D _circleCollider2D;
-    [SerializeField] private BoxCollider2D _boxCollider2D;
-
     public event EventHandler<float> OnMarioFound;
 
     public override void AppearFromBox() {

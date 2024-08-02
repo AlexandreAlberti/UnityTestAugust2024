@@ -1535,7 +1535,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -275.9309, y: -8.5, z: -1.0304008}
+  m_LocalPosition: {x: -275.93335, y: -8.5, z: -1.0304008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1575,6 +1575,11 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!4 &528254643 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8921884793405624492, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+  m_PrefabInstance: {fileID: 1946791339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &534114125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,6 +2309,7 @@ Transform:
   - {fileID: 1993716956}
   - {fileID: 106785636}
   - {fileID: 1709092499}
+  - {fileID: 528254643}
   m_Father: {fileID: 888617939}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &834562656
@@ -4732,6 +4738,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6267733856432464019, guid: 54d0fc0d579ec2d4bafcf6e32e6a5f98, type: 3}
   m_PrefabInstance: {fileID: 476562874}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1946791339
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 790678771}
+    m_Modifications:
+    - target: {fileID: 5797351189641002357, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+      propertyPath: m_Name
+      value: SurpriseBlockItemLeaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697011509664484660, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921884793405624492, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -88.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921884793405624492, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921884793405624492, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921884793405624492, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921884793405624492, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921884793405624492, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921884793405624492, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921884793405624492, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921884793405624492, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921884793405624492, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
 --- !u!1001 &1993716955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4906,6 +4973,7 @@ MonoBehaviour:
   _virtualCamera: {fileID: 72294086}
   _smallMario: {fileID: 380569104}
   _bigMario: {fileID: 891060475}
+  _tanookiMario: {fileID: 0}
 --- !u!1 &2015430055
 GameObject:
   m_ObjectHideFlags: 0

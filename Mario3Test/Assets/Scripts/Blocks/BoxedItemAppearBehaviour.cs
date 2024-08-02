@@ -1,5 +1,6 @@
 public enum BoxedItemAppearBehaviour {
     None,
     GrowAndStay,
-    JumpAndAutoCollect
+    JumpAndAutoCollect,
+    JumpAndGracefullyFall
 }

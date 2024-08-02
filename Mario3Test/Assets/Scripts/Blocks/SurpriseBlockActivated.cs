@@ -3,6 +3,7 @@ using UnityEngine;
 public class RegularBlockActivated : MonoBehaviour {
     private const string GROW_AND_STAY = "GrowAndStay";
     private const string JUMP_AND_AUTO_COLLECT = "JumpAndAutoCollect";
+    private const string JUMP_AND_GRACEFULLY_FALL= "JumpAndGracefullyFall";
 
     [SerializeField] private Animator _innerObjectAnimator;
     [SerializeField] private BoxedItemSO _boxedItemSO;
@@ -13,6 +14,9 @@ public class RegularBlockActivated : MonoBehaviour {
                 break;
             case BoxedItemAppearBehaviour.JumpAndAutoCollect:
                 _innerObjectAnimator.SetTrigger(JUMP_AND_AUTO_COLLECT);
+                break;
+            case BoxedItemAppearBehaviour.JumpAndGracefullyFall:
+                _innerObjectAnimator.SetTrigger(JUMP_AND_GRACEFULLY_FALL);
                 break;
             case BoxedItemAppearBehaviour.None:
             default:
