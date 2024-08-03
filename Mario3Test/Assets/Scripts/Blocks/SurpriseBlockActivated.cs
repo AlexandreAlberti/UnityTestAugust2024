@@ -6,9 +6,13 @@ public class RegularBlockActivated : MonoBehaviour {
     private const string JUMP_AND_GRACEFULLY_FALL= "JumpAndGracefullyFall";
 
     [SerializeField] private Animator _innerObjectAnimator;
-    [SerializeField] private BoxedItemSO _boxedItemSO;
-    public void OnHitAnimationEvent() {
-        switch (_boxedItemSO._behaviour) {
+    [SerializeField] protected BoxedItemSO _boxedItemSO;
+    public virtual void OnHitAnimationEvent() {
+        ActivateProperAnimator(_boxedItemSO);
+    }
+
+    protected void ActivateProperAnimator(BoxedItemSO boxedItemSO) {
+        switch (boxedItemSO._behaviour) {
             case BoxedItemAppearBehaviour.GrowAndStay:
                 _innerObjectAnimator.SetTrigger(GROW_AND_STAY);
                 break;
@@ -23,6 +27,5 @@ public class RegularBlockActivated : MonoBehaviour {
                 break;
         }
     }
-
 
 }

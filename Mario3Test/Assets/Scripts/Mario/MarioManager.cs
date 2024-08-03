@@ -9,12 +9,11 @@ public class MarioManager : MonoBehaviour {
     [SerializeField] private MarioVisuals _smallMario;
     [SerializeField] private BigMarioVisuals _bigMario;
     [SerializeField] private TanookiMarioVisuals _tanookiMario;
-
-    private MarioState _marioState;
+    [SerializeField] private MarioState _marioState;
 
     private void Awake() {
         Instance = this;
-        _marioState = MarioState.RacoonMario;
+        UpdateActiveMario();
     }
 
     public bool CanBreakRegularBlocks() {
@@ -28,12 +27,9 @@ public class MarioManager : MonoBehaviour {
     public void MushroomPowerUp() {
         if (_marioState == MarioState.LittleMario) {
             _marioState = MarioState.BigMario;
-            _virtualCamera.Follow = _bigMario.transform;
+            UpdateActiveMario();
             _bigMario.transform.position = _smallMario.transform.position;
-            _bigMario.gameObject.SetActive(true);
-            _tanookiMario.gameObject.SetActive(false);
-            _smallMario.gameObject.SetActive(false);
-            _bigMario.MarkAsGrow(); 
+            _bigMario.MarkAsGrow();
         }
     }
 
@@ -51,11 +47,27 @@ public class MarioManager : MonoBehaviour {
         }
 
         _marioState = MarioState.RacoonMario;
-        _virtualCamera.Follow = _tanookiMario.transform;
+        UpdateActiveMario();
         _tanookiMario.transform.position = currentMarioVisuals.transform.position;
-        _tanookiMario.gameObject.SetActive(true);
-        _bigMario.gameObject.SetActive(false);
-        _smallMario.gameObject.SetActive(false);
         _tanookiMario.MarkAsTransform();
+    }
+    
+    private void UpdateActiveMario() {
+        if (_marioState == MarioState.LittleMario) {
+            _bigMario.gameObject.SetActive(false);
+            _tanookiMario.gameObject.SetActive(false);
+            _smallMario.gameObject.SetActive(true);
+            _virtualCamera.Follow = _smallMario.transform;
+        } else if (_marioState == MarioState.BigMario) {
+            _bigMario.gameObject.SetActive(true);
+            _tanookiMario.gameObject.SetActive(false);
+            _smallMario.gameObject.SetActive(false);
+            _virtualCamera.Follow = _bigMario.transform;
+        } else if (_marioState == MarioState.RacoonMario) {
+            _bigMario.gameObject.SetActive(false);
+            _tanookiMario.gameObject.SetActive(true);
+            _smallMario.gameObject.SetActive(false);
+            _virtualCamera.Follow = _tanookiMario.transform;
+        }
     }
 }

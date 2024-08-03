@@ -5,11 +5,7 @@ public class BlockInnerObjectSpawned : MonoBehaviour {
     [SerializeField] private ItemInBox _itemInBox;
     [SerializeField] private ItemInBox _prefabToIntantiate;
 
-    public void OnSpawnedAnimationEvent() {
-        _itemInBox.AppearFromBox();
-    }
-
-    public void OnSpawnItemInBox() {
+    public virtual void OnSpawnItemInBox() {
         ItemInBox newItem = Instantiate(_prefabToIntantiate, transform.position, Quaternion.identity);
         _itemInBox.gameObject.SetActive(false);
         newItem.AppearFromBox();
