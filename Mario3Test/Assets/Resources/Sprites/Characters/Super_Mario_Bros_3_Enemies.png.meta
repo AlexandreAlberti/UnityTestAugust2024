@@ -1,0 +1,844 @@
+fileFormatVersion: 2
+guid: dc34ce8563c15024daf705ba922dc3b0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 184
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0edccb98af5f1204baed4f7c1ffccbba
+      internalID: -434461868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 182
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2bb6c5346fa4c4181e26a850a79dac
+      internalID: 1233202493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 183
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b574c4126946c74a86a841ccb498d3a
+      internalID: 209331705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_3
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 184
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7736b3bf150c4e643b510fbcdbca0a25
+      internalID: -999021296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_4
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 184
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6b179fa12c39848988f54cb6505f26
+      internalID: -1126828544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_5
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 184
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0101edb5fe8706843bd67e596db60436
+      internalID: 261048278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_6
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 184
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4660b42bc362dfe4898d89bd27096b2e
+      internalID: 567718946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_7
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 184
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62505a894e88b3469cfddc2eec40ed2
+      internalID: -1002022161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_8
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 184
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fd0178f926e124fa3a001eacab47fc
+      internalID: -1583454503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_9
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 161
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbd90b05d5e98e4ca2cb92c42a5adf7
+      internalID: -2085791684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 96
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4717e1d29e643dd4683aac65a16932fc
+      internalID: -1951180167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_11
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 96
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191e6fd324e1af443aa9733798059dfb
+      internalID: -1599126023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_12
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 95
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8103d928606c338428e17a86cd159881
+      internalID: -2086296952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_13
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 96
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0047dd6a07a4e884e8c3295130fe4da9
+      internalID: -1196524507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_14
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 96
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6bbe9f218e88424ab4a2b43f5a31d5b
+      internalID: 306050118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_15
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 96
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387d16680b9cad044a419aa595b4f215
+      internalID: -408069734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_16
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 58
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71e13c73035a91498c3e1a21a09b328
+      internalID: -17986562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_17
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 59
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4c43b790831d147b33a80a0fd5f51b
+      internalID: -1604137662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_18
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 59
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99cca47c6d5c69428e668d72786d19a
+      internalID: -1134152605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_19
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 59
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe267f1d42adef7459cc789add3c4afc
+      internalID: 334849451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_20
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 58
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49abf40fd891a3f40bcb8f11945deeae
+      internalID: 1617775432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_21
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 59
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5185dfcb72fa69438565d328067dc20
+      internalID: -1803535731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_22
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 58
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd288a3af6def7c40ae004a2d1ba1dd3
+      internalID: 1142012493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_23
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 58
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8cbefe4e1511bf4baa885c0f7004068
+      internalID: 1939667585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_24
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 11
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b6781c6cded0545835719fae0f7b06
+      internalID: -1075798714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_25
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 12
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b865bbfd6f5b0d848ba24d64004e348a
+      internalID: -1128960519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_26
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61912b89bd3ead748a3ff20b9c4876b7
+      internalID: 328292700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_27
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 12
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd285245dcd76e43a0d86cb3c0bdd55
+      internalID: 695398146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_28
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 11
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe67a7be29d9e94a85f191bbe89daf7
+      internalID: -309459546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_29
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 12
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4250a9467f61e478b8dc024ef4189f
+      internalID: 1202328604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_30
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 11
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5931400417fa2cc4ea13fa7bd601281f
+      internalID: 99109019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super_Mario_Bros_3_Enemies_31
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 11
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f273975bb2e78574e85fcb13cf4da59e
+      internalID: 499849106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Super_Mario_Bros_3_Enemies_0: -434461868
+      Super_Mario_Bros_3_Enemies_1: 1233202493
+      Super_Mario_Bros_3_Enemies_10: -1951180167
+      Super_Mario_Bros_3_Enemies_11: -1599126023
+      Super_Mario_Bros_3_Enemies_12: -2086296952
+      Super_Mario_Bros_3_Enemies_13: -1196524507
+      Super_Mario_Bros_3_Enemies_14: 306050118
+      Super_Mario_Bros_3_Enemies_15: -408069734
+      Super_Mario_Bros_3_Enemies_16: -17986562
+      Super_Mario_Bros_3_Enemies_17: -1604137662
+      Super_Mario_Bros_3_Enemies_18: -1134152605
+      Super_Mario_Bros_3_Enemies_19: 334849451
+      Super_Mario_Bros_3_Enemies_2: 209331705
+      Super_Mario_Bros_3_Enemies_20: 1617775432
+      Super_Mario_Bros_3_Enemies_21: -1803535731
+      Super_Mario_Bros_3_Enemies_22: 1142012493
+      Super_Mario_Bros_3_Enemies_23: 1939667585
+      Super_Mario_Bros_3_Enemies_24: -1075798714
+      Super_Mario_Bros_3_Enemies_25: -1128960519
+      Super_Mario_Bros_3_Enemies_26: 328292700
+      Super_Mario_Bros_3_Enemies_27: 695398146
+      Super_Mario_Bros_3_Enemies_28: -309459546
+      Super_Mario_Bros_3_Enemies_29: 1202328604
+      Super_Mario_Bros_3_Enemies_3: -999021296
+      Super_Mario_Bros_3_Enemies_30: 99109019
+      Super_Mario_Bros_3_Enemies_31: 499849106
+      Super_Mario_Bros_3_Enemies_4: -1126828544
+      Super_Mario_Bros_3_Enemies_5: 261048278
+      Super_Mario_Bros_3_Enemies_6: 567718946
+      Super_Mario_Bros_3_Enemies_7: -1002022161
+      Super_Mario_Bros_3_Enemies_8: -1583454503
+      Super_Mario_Bros_3_Enemies_9: -2085791684
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
