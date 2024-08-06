@@ -258,6 +258,8 @@ MonoBehaviour:
   _breakForce: 10
   _jumpForce: 10
   _jumpExtraTimeMax: 0.4
+  _maxSpeedTimeMax: 5
+  _maxFallSpeed: -20
   _input: {fileID: 4587598659556258678}
   _rigidbody2D: {fileID: 8133096592119865136}
 --- !u!95 &1402661876033856400

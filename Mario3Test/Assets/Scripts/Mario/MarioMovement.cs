@@ -9,6 +9,8 @@ public class MarioMovement : MonoBehaviour {
     [SerializeField] private float _breakForce;
     [SerializeField] protected float _jumpForce;
     [SerializeField] protected float _jumpExtraTimeMax;
+    [SerializeField] protected float _maxSpeedTimeMax;
+    [SerializeField] protected float _maxFallSpeed;
     [SerializeField] protected MarioInputControl _input;
     [SerializeField] protected Rigidbody2D _rigidbody2D;
 
@@ -21,10 +23,12 @@ public class MarioMovement : MonoBehaviour {
     public event EventHandler<float> OnRunMaxSpeed;
 
     protected float _currentSpeed;
+    protected float _currentMaxSpeedTime;
     protected float _jumpExtraTime;
 
     private bool _isWalking;
     private bool _isRuning;
+    protected bool _isRunningMaxSpeedEnoughTime;
     protected bool _isJumping;
     protected bool _isJumpPressed;
     private bool _isWalkingRight;
@@ -42,8 +46,10 @@ public class MarioMovement : MonoBehaviour {
         _isJumpPressed = false;
         _isWalkingRight = true;
         _isBreaking = false;
+        _isRunningMaxSpeedEnoughTime = false;
         _currentSpeed = 0.0f;
         _jumpExtraTime = 0.0f;
+        _currentMaxSpeedTime = 0.0f;
     }
 
 
@@ -67,6 +73,11 @@ public class MarioMovement : MonoBehaviour {
     }
 
     protected virtual void HandleVerticalMovement() {
+
+        if (_rigidbody2D.velocity.y < _maxFallSpeed) {
+            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _maxFallSpeed);
+            return;
+        }
 
         if (_rigidbody2D.velocity.y < 0.0f) {
             // Falling, do nothing
@@ -100,11 +111,19 @@ public class MarioMovement : MonoBehaviour {
         _isCrouching = !_isJumping && moveAmountY < -0.5;
 
         if (!_isCrouching && (moveAmountX > 0.0f || moveAmountX < 0.0f)) {
-            _currentSpeed += moveAmountX * Time.deltaTime * (_isRuning ? _runAcceleration : _walkAcceleration);
+            _isBreaking = _isRuning && _currentSpeed > 0.0f && moveAmountX < 0.0f || _currentSpeed < 0.0f && moveAmountX > 0.0f;
+
+            Debug.Log($"_isJumping {_isJumping} + _isBreaking {_isBreaking} + _currentSpeed {_currentSpeed} + moveAmountX {moveAmountX}");
+            if (!_isJumping || _isBreaking 
+                || _currentSpeed == 0.0f
+                || moveAmountX > 0.0f && _currentSpeed < _walkSpeed
+                || moveAmountX < 0.0f && _currentSpeed > -_walkSpeed) {
+                _currentSpeed += moveAmountX * Time.deltaTime * (_isRuning && !_isJumping ? _runAcceleration : _walkAcceleration);
+            }
+
             _currentSpeed = _currentSpeed > 0 ?
                 Mathf.Min(_currentSpeed, _isRuning ? _runSpeed : _walkSpeed) :
                 Mathf.Max(_currentSpeed, _isRuning ? -_runSpeed : -_walkSpeed);
-            _isBreaking = _isRuning && _currentSpeed > 0.0f && moveAmountX < 0.0f || _currentSpeed < 0.0f && moveAmountX > 0.0f;
         } else if (_currentSpeed > 0.1f) {
             // Natural Breaking
             _currentSpeed = Mathf.Max(0.0f, _currentSpeed - Time.deltaTime * _breakForce);
@@ -140,11 +159,27 @@ public class MarioMovement : MonoBehaviour {
     private void HandleEvents() {
         float currentSpeedAbs = Mathf.Abs(_currentSpeed);
 
+        if (currentSpeedAbs >= _runSpeed) {
+            _currentMaxSpeedTime += Time.deltaTime;
+        } else {
+            _currentMaxSpeedTime -= Time.deltaTime;
+        }
+
+        _isRunningMaxSpeedEnoughTime = false;
+
+        if (_currentMaxSpeedTime < 0.0f) {
+            _currentMaxSpeedTime = 0.0f;
+        } else if (_currentMaxSpeedTime > _maxSpeedTimeMax) {
+            _currentMaxSpeedTime = _maxSpeedTimeMax;
+            _isRunningMaxSpeedEnoughTime = true;
+        }
+
+
         if (_isCrouching) {
             OnCrouching?.Invoke(this, EventArgs.Empty);
         } else if (_isBreaking) {
             OnBreaking?.Invoke(this, EventArgs.Empty);
-        } else if (currentSpeedAbs >= _runSpeed) {
+        } else if (_isRunningMaxSpeedEnoughTime) {
             OnRunMaxSpeed?.Invoke(this, currentSpeedAbs);
         } else if (currentSpeedAbs > 0.01f) {
             OnRun?.Invoke(this, currentSpeedAbs);

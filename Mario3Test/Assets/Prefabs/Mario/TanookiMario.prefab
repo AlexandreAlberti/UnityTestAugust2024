@@ -228,7 +228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2121122705418612546
 Transform:
   m_ObjectHideFlags: 0
@@ -349,11 +349,14 @@ MonoBehaviour:
   _breakForce: 10
   _jumpForce: 10
   _jumpExtraTimeMax: 0.4
+  _maxSpeedTimeMax: 5
+  _maxFallSpeed: -20
   _input: {fileID: 4587598659556258678}
   _rigidbody2D: {fileID: 8133096592119865136}
   _flyImpulse: 15
   _softFallImpulse: 3
-  _flyImpulseCooldown: 0.25
+  _flyImpulseCooldown: 0.2
+  _flyTimeMax: 5
 --- !u!95 &1402661876033856400
 Animator:
   serializedVersion: 5

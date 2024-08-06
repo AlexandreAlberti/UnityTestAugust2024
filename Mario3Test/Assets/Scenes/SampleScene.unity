@@ -14359,10 +14359,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TanookiMario
       objectReference: {fileID: 0}
-    - target: {fileID: 8149406316958689417, guid: dc3e79833bd8b1d488976f3f6512469f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30795,7 +30791,7 @@ MonoBehaviour:
   _smallMario: {fileID: 380569104}
   _bigMario: {fileID: 891060475}
   _tanookiMario: {fileID: 1527044306}
-  _marioState: 3
+  _marioState: 0
 --- !u!1001 &2013399071
 PrefabInstance:
   m_ObjectHideFlags: 0
