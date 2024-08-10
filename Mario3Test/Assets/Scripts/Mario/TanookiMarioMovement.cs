@@ -31,9 +31,8 @@ namespace Mario {
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _maxFallSpeed);
             }
 
-
             _isFlyAllowed = false;
-            if (!_isJumping && _isJumpPressed) {
+            if (!_isJumping && _isJumpPressed && _rigidbody2D.velocity.y == 0.0f) {
                 // REGULAR JUMP
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * _jumpForce);
                 _isJumping = true;

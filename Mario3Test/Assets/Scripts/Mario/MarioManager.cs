@@ -1,5 +1,6 @@
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Mario {
     public class MarioManager : MonoBehaviour {
@@ -10,6 +11,7 @@ namespace Mario {
         [SerializeField] private BigMarioVisuals _bigMario;
         [SerializeField] private TanookiMarioVisuals _tanookiMario;
         [SerializeField] private MarioState _marioState;
+        [SerializeField] private InitialPosition _initialPosition;
 
         private void Awake() {
             Instance = this;
@@ -69,6 +71,10 @@ namespace Mario {
                 _smallMario.gameObject.SetActive(false);
                 _virtualCamera.Follow = _tanookiMario.transform;
             }
+        }
+
+        public void RestartLevel() {
+            SceneManager.LoadScene(0);
         }
     }
 }
