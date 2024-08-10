@@ -200,5 +200,11 @@ public class MarioMovement : MonoBehaviour {
             _isJumping = false;
             OnJumpChange?.Invoke(this, false);
         }
+
+        Wall wall = collision.transform.GetComponent<Wall>();
+
+        if (wall) {
+            _currentSpeed = 0.0f;
+        }
     }
 }

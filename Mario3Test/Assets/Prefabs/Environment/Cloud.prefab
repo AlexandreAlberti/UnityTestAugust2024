@@ -50,7 +50,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3871057322508168148, guid: f2d7b9608b8bcbc458a7e644a711a444, type: 3}
       propertyPath: m_Name
-      value: JumpablePlatform
+      value: Cloud
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839214812068738967, guid: f2d7b9608b8bcbc458a7e644a711a444, type: 3}
+      propertyPath: m_Size.y
+      value: 0.49479198
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839214812068738967, guid: f2d7b9608b8bcbc458a7e644a711a444, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.25751066
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877045690853061674, guid: f2d7b9608b8bcbc458a7e644a711a444, type: 3}
+      propertyPath: m_Size.y
+      value: 0.07450104
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877045690853061674, guid: f2d7b9608b8bcbc458a7e644a711a444, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.46274948
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
