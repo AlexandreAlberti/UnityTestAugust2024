@@ -1,26 +1,29 @@
+using Mario;
 using System;
 using UnityEngine;
 
-public class Leaf : ItemInBox {
-    public event EventHandler OnStartMoving;
+namespace Items {
+    public class Leaf : ItemInBox {
+        public event EventHandler OnStartMoving;
 
-    public override void AppearFromBox() {
-        OnStartMoving?.Invoke(this, EventArgs.Empty);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision) {
-        Mario mario = collision.GetComponent<Mario>();
-
-        if (mario) {
-            LeafEffect(mario);
-        }
-    }
-
-    private void LeafEffect(Mario mario) {
-        if (MarioManager.Instance.CanTransformToTanooki()) {
-            MarioManager.Instance.LeafPowerUp();
+        public override void AppearFromBox() {
+            OnStartMoving?.Invoke(this, EventArgs.Empty);
         }
 
-        gameObject.SetActive(false); // Deactivate Leaf
+        private void OnTriggerEnter2D(Collider2D collision) {
+            Mario.Mario mario = collision.GetComponent<Mario.Mario>();
+
+            if (mario) {
+                LeafEffect(mario);
+            }
+        }
+
+        private void LeafEffect(Mario.Mario mario) {
+            if (MarioManager.Instance.CanTransformToTanooki()) {
+                MarioManager.Instance.LeafPowerUp();
+            }
+
+            gameObject.SetActive(false); // Deactivate Leaf
+        }
     }
 }

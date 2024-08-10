@@ -1,4 +1,6 @@
 using UnityEngine;
 
-public class Mario : MonoBehaviour {
+namespace Mario {
+    public class Mario : MonoBehaviour {
+    }
 }

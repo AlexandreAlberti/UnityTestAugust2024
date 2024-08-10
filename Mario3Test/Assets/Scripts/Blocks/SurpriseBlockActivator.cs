@@ -1,42 +1,46 @@
+using Items;
+using Mario;
 using UnityEngine;
 
-public class SurpriseBlockActivator : MonoBehaviour {
-    private const string BLOCK_HIT = "BlockHit";
+namespace Blocks {
+    public class SurpriseBlockActivator : MonoBehaviour {
+        private const string BLOCK_HIT = "BlockHit";
 
-    [SerializeField] protected Animator _animator;
-    [SerializeField] protected ItemInBox _itemInBox;
-    [SerializeField] private bool _isLateral;
+        [SerializeField] protected Animator _animator;
+        [SerializeField] protected ItemInBox _itemInBox;
+        [SerializeField] private bool _isLateral;
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if (_isLateral) {
-            return;
+        private void OnCollisionEnter2D(Collision2D collision) {
+            if (_isLateral) {
+                return;
+            }
+
+            Mario.Mario mario = collision.transform.GetComponent<Mario.Mario>();
+
+            if (mario) {
+                OnValidContact();
+            }
         }
 
-        Mario mario = collision.transform.GetComponent<Mario>();
+        private void OnTriggerEnter2D(Collider2D collision) {
+            if (!_isLateral) {
+                return;
+            }
 
-        if (mario) {
-            OnValidContact();
+            TanookiTail tanookiTail = collision.transform.GetComponent<TanookiTail>();
+
+            if (tanookiTail) {
+                OnValidContact();
+            }
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (!_isLateral) {
-            return;
+        protected virtual void OnValidContact() {
+            _itemInBox.gameObject.SetActive(true);
+            ActivateAnimator();
         }
 
-        TanookiTail tanookiTail = collision.transform.GetComponent<TanookiTail>();
-
-        if (tanookiTail) {
-            OnValidContact();
+        protected void ActivateAnimator() {
+            _animator.SetTrigger(BLOCK_HIT);
         }
-    }
-
-    protected virtual void OnValidContact() {
-        _itemInBox.gameObject.SetActive(true);
-        ActivateAnimator();
-    }
-
-    protected void ActivateAnimator() {
-        _animator.SetTrigger(BLOCK_HIT);
     }
 }

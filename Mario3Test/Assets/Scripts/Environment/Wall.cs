@@ -1,4 +1,6 @@
 using UnityEngine;
 
-public class Wall : MonoBehaviour {
+namespace Environment {
+    public class Wall : MonoBehaviour {
+    }
 }

@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class TanookiTail : MonoBehaviour
-{
+namespace Mario {
+    public class TanookiTail : MonoBehaviour {
+    }
 }
