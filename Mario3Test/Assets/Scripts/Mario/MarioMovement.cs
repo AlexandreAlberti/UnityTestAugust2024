@@ -4,15 +4,16 @@ using UnityEngine;
 
 namespace Mario {
     public class MarioMovement : MonoBehaviour {
-        [SerializeField] private float _walkSpeed;
-        [SerializeField] private float _walkAcceleration;
-        [SerializeField] protected float _runSpeed;
-        [SerializeField] private float _runAcceleration;
-        [SerializeField] private float _breakForce;
-        [SerializeField] protected float _jumpForce;
-        [SerializeField] protected float _jumpExtraTimeMax;
-        [SerializeField] protected float _maxSpeedTimeMax;
-        [SerializeField] protected float _maxFallSpeed;
+        private const float WALK_MAX_SPEED = 5.0f;
+        private const float WALK_ACCELERATION = 20.0f;
+        protected const float RUN_MAX_SPEED = 12.0f;
+        private const float RUN_ACCELERATION = 15.0f;
+        private const float BREAK_FORCE = 10.0f;
+        protected const float JUMP_FORCE = 10.0f;
+        protected const float JUMP_EXTRA_TIME_IF_BUTTON_HOLD = 0.4f;
+        protected const float MIN_TIME_AT_MAX_SPEED_TO_CHANGE_ANIMATION = 3.0f;
+        protected const float MAX_FALL_SPEED = -20.0f;
+        
         [SerializeField] protected MarioInputControl _input;
         [SerializeField] protected Rigidbody2D _rigidbody2D;
 
@@ -77,8 +78,8 @@ namespace Mario {
 
         protected virtual void HandleVerticalMovement() {
 
-            if (_rigidbody2D.velocity.y < _maxFallSpeed) {
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _maxFallSpeed);
+            if (_rigidbody2D.velocity.y < MAX_FALL_SPEED) {
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, MAX_FALL_SPEED);
                 return;
             }
 
@@ -88,16 +89,16 @@ namespace Mario {
             }
 
             if (!_isJumping && _isJumpPressed) {
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * _jumpForce);
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * JUMP_FORCE);
                 _isJumping = true;
                 JumpEvent();
                 _jumpExtraTime = 0.0f;
             } else if (_isJumping && !_isJumpPressed) {
-                _jumpExtraTime = _jumpExtraTimeMax;
+                _jumpExtraTime = JUMP_EXTRA_TIME_IF_BUTTON_HOLD;
             } else if (_isJumping && _isJumpPressed) {
                 _jumpExtraTime += Time.deltaTime;
-                if (_jumpExtraTime <= _jumpExtraTimeMax) {
-                    _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * _jumpForce);
+                if (_jumpExtraTime <= JUMP_EXTRA_TIME_IF_BUTTON_HOLD) {
+                    _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * JUMP_FORCE);
                 }
             }
         }
@@ -110,8 +111,8 @@ namespace Mario {
             Vector2 inputVector = _input.GetMovementVectorNormalized();
             float moveAmountY = inputVector.y;
             float moveAmountX = inputVector.x;
-
             _isCrouching = !_isJumping && moveAmountY < -0.5;
+            _isBreaking = false;
 
             if (!_isCrouching && (moveAmountX > 0.0f || moveAmountX < 0.0f)) {
                 _isBreaking = _isRuning && _currentSpeed > 0.0f && moveAmountX < 0.0f || _currentSpeed < 0.0f && moveAmountX > 0.0f;
@@ -119,21 +120,19 @@ namespace Mario {
                 // Debug.Log($"_isJumping {_isJumping} + _isBreaking {_isBreaking} + _currentSpeed {_currentSpeed} + moveAmountX {moveAmountX}");
                 if (!_isJumping || _isBreaking
                     || _currentSpeed == 0.0f
-                    || moveAmountX > 0.0f && _currentSpeed < _walkSpeed
-                    || moveAmountX < 0.0f && _currentSpeed > -_walkSpeed) {
-                    _currentSpeed += moveAmountX * Time.deltaTime * (_isRuning && !_isJumping ? _runAcceleration : _walkAcceleration);
+                    || moveAmountX > 0.0f && _currentSpeed < WALK_MAX_SPEED
+                    || moveAmountX < 0.0f && _currentSpeed > -WALK_MAX_SPEED) {
+                    _currentSpeed += moveAmountX * Time.deltaTime * (_isRuning && !_isJumping ? RUN_ACCELERATION : WALK_ACCELERATION);
                 }
 
                 _currentSpeed = _currentSpeed > 0 ?
-                    Mathf.Min(_currentSpeed, _isRuning ? _runSpeed : _walkSpeed) :
-                    Mathf.Max(_currentSpeed, _isRuning ? -_runSpeed : -_walkSpeed);
-            } else if (_currentSpeed > 0.1f) {
+                    Mathf.Min(_currentSpeed, RUN_MAX_SPEED) :
+                    Mathf.Max(_currentSpeed, -RUN_MAX_SPEED);
+            } else if (Mathf.Abs(_currentSpeed) > 0.0f) {
                 // Natural Breaking
-                _currentSpeed = Mathf.Max(0.0f, _currentSpeed - Time.deltaTime * _breakForce);
-
-            } else if (_currentSpeed < -0.1f) {
-                // Natural Breaking
-                _currentSpeed = Mathf.Min(0.0f, _currentSpeed + Time.deltaTime * _breakForce);
+                _currentSpeed = _currentSpeed > 0 ? 
+                    Mathf.Max(0.0f, _currentSpeed - Time.deltaTime * BREAK_FORCE) :
+                    Mathf.Min(0.0f, _currentSpeed + Time.deltaTime * BREAK_FORCE);
             } else {
                 // Stop
                 _currentSpeed = 0.0f;
@@ -162,7 +161,7 @@ namespace Mario {
         private void HandleEvents() {
             float currentSpeedAbs = Mathf.Abs(_currentSpeed);
 
-            if (currentSpeedAbs >= _runSpeed) {
+            if (currentSpeedAbs >= RUN_MAX_SPEED) {
                 _currentMaxSpeedTime += Time.deltaTime;
             } else {
                 _currentMaxSpeedTime -= Time.deltaTime;
@@ -172,8 +171,8 @@ namespace Mario {
 
             if (_currentMaxSpeedTime < 0.0f) {
                 _currentMaxSpeedTime = 0.0f;
-            } else if (_currentMaxSpeedTime > _maxSpeedTimeMax) {
-                _currentMaxSpeedTime = _maxSpeedTimeMax;
+            } else if (_currentMaxSpeedTime > MIN_TIME_AT_MAX_SPEED_TO_CHANGE_ANIMATION) {
+                _currentMaxSpeedTime = MIN_TIME_AT_MAX_SPEED_TO_CHANGE_ANIMATION;
                 _isRunningMaxSpeedEnoughTime = true;
             }
 
@@ -184,7 +183,7 @@ namespace Mario {
                 OnBreaking?.Invoke(this, EventArgs.Empty);
             } else if (_isRunningMaxSpeedEnoughTime) {
                 OnRunMaxSpeed?.Invoke(this, EventArgs.Empty);
-            } else if (currentSpeedAbs > _walkSpeed) {
+            } else if (currentSpeedAbs > WALK_MAX_SPEED) {
                 OnRun?.Invoke(this, EventArgs.Empty);
             } else if (currentSpeedAbs > 0.01f) {
                 OnWalk?.Invoke(this, EventArgs.Empty);

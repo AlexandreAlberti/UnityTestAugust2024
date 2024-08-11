@@ -4,10 +4,10 @@ using UnityEngine;
 namespace Mario {
     public class TanookiMarioMovement : MarioMovement {
 
-        [SerializeField] private float _flyImpulse;
-        [SerializeField] private float _softFallImpulse;
-        [SerializeField] private float _flyImpulseCooldown;
-        [SerializeField] private float _flyTimeMax;
+        private const float FLY_IMPULSE = 15.0f;
+        private const float SOFT_FALL_IMPULSE = 2.0f;
+        private const float FLY_IMPULSE_COOLDOWN = 0.2f;
+        private const float MAX_TIME_FLYING = 4.0f;
 
         public event EventHandler OnAttack;
         public event EventHandler OnPlanning;
@@ -28,34 +28,34 @@ namespace Mario {
         }
         protected override void HandleVerticalMovement() {
 
-            if (_rigidbody2D.velocity.y < _maxFallSpeed) {
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _maxFallSpeed);
+            if (_rigidbody2D.velocity.y < MAX_FALL_SPEED) {
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, MAX_FALL_SPEED);
             }
 
             _isFlyAllowed = false;
             if (!_isJumping && _isJumpPressed && _rigidbody2D.velocity.y == 0.0f) {
                 // REGULAR JUMP
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * _jumpForce);
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * JUMP_FORCE);
                 _isJumping = true;
                 JumpEvent();
                 _jumpExtraTime = 0.0f;
             } else if (_isJumping && !_isJumpPressed) {
                 // STOP EXTENDED JUMP
-                _jumpExtraTime = _jumpExtraTimeMax;
+                _jumpExtraTime = JUMP_EXTRA_TIME_IF_BUTTON_HOLD;
                 _isFlyAllowed = true;
             } else if (_isJumping && _isJumpPressed) {
                 // EXTENDED JUMP
                 _jumpExtraTime += Time.deltaTime;
-                if (_jumpExtraTime <= _jumpExtraTimeMax) {
-                    _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * _jumpForce);
+                if (_jumpExtraTime <= JUMP_EXTRA_TIME_IF_BUTTON_HOLD) {
+                    _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * JUMP_FORCE);
                 } else {
                     _isFlyAllowed = true;
                 }
             }
 
             _flyImpulseTimer += Time.deltaTime;
-            _isSoftFallAllowed = _flyImpulseTimer >= _flyImpulseCooldown && _rigidbody2D.velocity.y < 0.0f;
-            _isFlyAllowed &= _flyImpulseTimer >= _flyImpulseCooldown && _isRunningMaxSpeedEnoughTime
+            _isSoftFallAllowed = _flyImpulseTimer >= FLY_IMPULSE_COOLDOWN && _rigidbody2D.velocity.y < 0.0f;
+            _isFlyAllowed &= _flyImpulseTimer >= FLY_IMPULSE_COOLDOWN && _isRunningMaxSpeedEnoughTime
                 && !_lastFrameJumpPressed;
 
             if (_isJumping) {
@@ -64,12 +64,12 @@ namespace Mario {
                 _flyTimer = 0.0f;
             }
 
-            if (_isFlyAllowed && _isJumpPressed && _flyTimer < _flyTimeMax) {
+            if (_isFlyAllowed && _isJumpPressed && _flyTimer < MAX_TIME_FLYING) {
                 _flyImpulseTimer = 0.0f;
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * _flyImpulse);
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * FLY_IMPULSE);
             } else if (_isSoftFallAllowed && _isJumpPressed) {
                 _flyImpulseTimer = 0.0f;
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * _softFallImpulse);
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * SOFT_FALL_IMPULSE);
                 OnPlanning?.Invoke(this, EventArgs.Empty);
             }
 

@@ -31315,7 +31315,7 @@ MonoBehaviour:
   _smallMario: {fileID: 380569104}
   _bigMario: {fileID: 891060475}
   _tanookiMario: {fileID: 1527044306}
-  _marioState: 0
+  _marioState: 3
   _initialPosition: {fileID: 292659000}
 --- !u!1001 &2013399071
 PrefabInstance:
