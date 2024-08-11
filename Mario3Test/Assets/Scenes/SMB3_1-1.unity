@@ -13842,7 +13842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3227112260438406123, guid: 31b99c165e6f0974c91b36a190211716, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.9
+      value: 10.99
       objectReference: {fileID: 0}
     - target: {fileID: 3379044550822381685, guid: 31b99c165e6f0974c91b36a190211716, type: 3}
       propertyPath: m_Size.x
@@ -16516,7 +16516,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1246158279041520314, guid: 31b99c165e6f0974c91b36a190211716, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.77
+      value: 18.62
       objectReference: {fileID: 0}
     - target: {fileID: 1246158279041520314, guid: 31b99c165e6f0974c91b36a190211716, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16536,7 +16536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3637873505757268323, guid: 31b99c165e6f0974c91b36a190211716, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.15
+      value: -5.122
       objectReference: {fileID: 0}
     - target: {fileID: 5510725982625195196, guid: 31b99c165e6f0974c91b36a190211716, type: 3}
       propertyPath: m_Name
@@ -30500,7 +30500,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1246158279041520314, guid: 31b99c165e6f0974c91b36a190211716, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.38
+      value: 38.49
       objectReference: {fileID: 0}
     - target: {fileID: 1246158279041520314, guid: 31b99c165e6f0974c91b36a190211716, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31315,7 +31315,6 @@ MonoBehaviour:
   _smallMario: {fileID: 380569104}
   _bigMario: {fileID: 891060475}
   _tanookiMario: {fileID: 1527044306}
-  _marioState: 3
   _initialPosition: {fileID: 292659000}
 --- !u!1001 &2013399071
 PrefabInstance:
