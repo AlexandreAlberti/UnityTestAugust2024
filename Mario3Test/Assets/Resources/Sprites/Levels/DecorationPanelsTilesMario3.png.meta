@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 14
+  spritePixelsToUnits: 62
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -127,9 +127,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 178
-        width: 14
-        height: 14
+        y: 706
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_1
       rect:
         serializedVersion: 2
-        x: 22
-        y: 178
-        width: 13
-        height: 14
+        x: 81
+        y: 706
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_2
       rect:
         serializedVersion: 2
-        x: 43
-        y: 178
-        width: 14
-        height: 14
+        x: 166
+        y: 706
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 178
-        width: 14
-        height: 14
+        x: 256
+        y: 706
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_4
       rect:
         serializedVersion: 2
-        x: 91
-        y: 178
-        width: 14
-        height: 14
+        x: 361
+        y: 706
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_5
       rect:
         serializedVersion: 2
-        x: 120
-        y: 178
-        width: 14
-        height: 14
+        x: 474
+        y: 706
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,9 +253,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 155
-        width: 14
-        height: 13
+        y: 613
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_7
       rect:
         serializedVersion: 2
-        x: 21
-        y: 155
-        width: 13
-        height: 13
+        x: 81
+        y: 613
+        width: 63
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_8
       rect:
         serializedVersion: 2
-        x: 43
-        y: 155
-        width: 14
-        height: 13
+        x: 166
+        y: 613
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_9
       rect:
         serializedVersion: 2
-        x: 64
-        y: 154
-        width: 14
-        height: 13
+        x: 256
+        y: 613
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_10
       rect:
         serializedVersion: 2
-        x: 91
-        y: 154
-        width: 14
-        height: 14
+        x: 361
+        y: 613
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_11
       rect:
         serializedVersion: 2
-        x: 120
-        y: 154
-        width: 14
-        height: 14
+        x: 474
+        y: 613
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,9 +379,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 130
-        width: 14
-        height: 14
+        y: 520
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,10 +399,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_13
       rect:
         serializedVersion: 2
-        x: 21
-        y: 130
-        width: 13
-        height: 14
+        x: 81
+        y: 520
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,10 +420,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_14
       rect:
         serializedVersion: 2
-        x: 43
-        y: 130
-        width: 14
-        height: 14
+        x: 166
+        y: 520
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,10 +441,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_15
       rect:
         serializedVersion: 2
-        x: 64
-        y: 130
-        width: 14
-        height: 14
+        x: 256
+        y: 520
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,10 +462,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_16
       rect:
         serializedVersion: 2
-        x: 91
-        y: 130
-        width: 14
-        height: 14
+        x: 361
+        y: 520
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,10 +483,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_17
       rect:
         serializedVersion: 2
-        x: 120
-        y: 130
-        width: 14
-        height: 14
+        x: 474
+        y: 520
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,9 +505,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 110
-        width: 14
-        height: 14
+        y: 434
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,10 +525,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_19
       rect:
         serializedVersion: 2
-        x: 21
-        y: 110
-        width: 14
-        height: 14
+        x: 81
+        y: 434
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,10 +546,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_20
       rect:
         serializedVersion: 2
-        x: 43
-        y: 110
-        width: 14
-        height: 14
+        x: 166
+        y: 434
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -567,10 +567,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_21
       rect:
         serializedVersion: 2
-        x: 64
-        y: 110
-        width: 14
-        height: 14
+        x: 256
+        y: 434
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -588,10 +588,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_22
       rect:
         serializedVersion: 2
-        x: 91
-        y: 110
-        width: 14
-        height: 14
+        x: 361
+        y: 434
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +609,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_23
       rect:
         serializedVersion: 2
-        x: 120
-        y: 110
-        width: 14
-        height: 14
+        x: 474
+        y: 434
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,9 +631,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 86
-        width: 14
-        height: 14
+        y: 341
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -651,10 +651,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_25
       rect:
         serializedVersion: 2
-        x: 21
-        y: 86
-        width: 14
-        height: 14
+        x: 81
+        y: 341
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -672,10 +672,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_26
       rect:
         serializedVersion: 2
-        x: 43
-        y: 86
-        width: 14
-        height: 14
+        x: 166
+        y: 341
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,10 +693,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_27
       rect:
         serializedVersion: 2
-        x: 64
-        y: 86
-        width: 14
-        height: 14
+        x: 256
+        y: 341
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,10 +714,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_28
       rect:
         serializedVersion: 2
-        x: 91
-        y: 86
-        width: 14
-        height: 14
+        x: 361
+        y: 341
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,10 +735,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_29
       rect:
         serializedVersion: 2
-        x: 120
-        y: 86
-        width: 14
-        height: 14
+        x: 474
+        y: 341
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -757,9 +757,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 66
-        width: 14
-        height: 14
+        y: 264
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,10 +777,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_31
       rect:
         serializedVersion: 2
-        x: 21
-        y: 66
-        width: 14
-        height: 14
+        x: 81
+        y: 264
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -798,10 +798,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_32
       rect:
         serializedVersion: 2
-        x: 43
-        y: 66
-        width: 14
-        height: 14
+        x: 166
+        y: 264
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -819,10 +819,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_33
       rect:
         serializedVersion: 2
-        x: 64
-        y: 66
-        width: 14
-        height: 14
+        x: 256
+        y: 264
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -840,10 +840,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_34
       rect:
         serializedVersion: 2
-        x: 91
-        y: 66
-        width: 14
-        height: 14
+        x: 361
+        y: 264
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -861,10 +861,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_35
       rect:
         serializedVersion: 2
-        x: 120
-        y: 66
-        width: 14
-        height: 14
+        x: 474
+        y: 264
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -883,9 +883,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 44
-        width: 16
-        height: 16
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -903,10 +903,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_37
       rect:
         serializedVersion: 2
-        x: 20
-        y: 44
-        width: 16
-        height: 16
+        x: 80
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -924,10 +924,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_38
       rect:
         serializedVersion: 2
-        x: 41
-        y: 44
-        width: 16
-        height: 16
+        x: 164
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -945,10 +945,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_39
       rect:
         serializedVersion: 2
-        x: 64
-        y: 44
-        width: 16
-        height: 16
+        x: 256
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -966,10 +966,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_40
       rect:
         serializedVersion: 2
-        x: 90
-        y: 44
-        width: 16
-        height: 16
+        x: 360
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -987,10 +987,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_41
       rect:
         serializedVersion: 2
-        x: 118
-        y: 44
-        width: 16
-        height: 16
+        x: 472
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1009,9 +1009,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 22
-        width: 16
-        height: 16
+        y: 88
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1029,10 +1029,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_43
       rect:
         serializedVersion: 2
-        x: 20
-        y: 22
-        width: 16
-        height: 16
+        x: 80
+        y: 88
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1050,10 +1050,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_44
       rect:
         serializedVersion: 2
-        x: 41
-        y: 22
-        width: 16
-        height: 16
+        x: 164
+        y: 88
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1071,10 +1071,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_45
       rect:
         serializedVersion: 2
-        x: 64
-        y: 22
-        width: 16
-        height: 16
+        x: 256
+        y: 88
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1092,10 +1092,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_46
       rect:
         serializedVersion: 2
-        x: 90
-        y: 22
-        width: 16
-        height: 16
+        x: 360
+        y: 88
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1113,10 +1113,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_47
       rect:
         serializedVersion: 2
-        x: 118
-        y: 22
-        width: 16
-        height: 16
+        x: 472
+        y: 88
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1136,8 +1136,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1155,10 +1155,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_49
       rect:
         serializedVersion: 2
-        x: 20
+        x: 80
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1176,10 +1176,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_50
       rect:
         serializedVersion: 2
-        x: 41
+        x: 164
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1197,10 +1197,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_51
       rect:
         serializedVersion: 2
-        x: 64
+        x: 256
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1218,10 +1218,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_52
       rect:
         serializedVersion: 2
-        x: 90
+        x: 360
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1239,10 +1239,10 @@ TextureImporter:
       name: DecorationPanelsTilesMario3_53
       rect:
         serializedVersion: 2
-        x: 118
+        x: 472
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
