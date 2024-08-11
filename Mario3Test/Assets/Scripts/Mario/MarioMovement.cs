@@ -21,8 +21,9 @@ namespace Mario {
         public event EventHandler OnCrouching;
         public event EventHandler<bool> OnChangeDirection;
         public event EventHandler<bool> OnJumpChange;
-        public event EventHandler<float> OnRun;
-        public event EventHandler<float> OnRunMaxSpeed;
+        public event EventHandler OnWalk;
+        public event EventHandler OnRun;
+        public event EventHandler OnRunMaxSpeed;
 
         protected float _currentSpeed;
         protected float _currentMaxSpeedTime;
@@ -182,9 +183,11 @@ namespace Mario {
             } else if (_isBreaking) {
                 OnBreaking?.Invoke(this, EventArgs.Empty);
             } else if (_isRunningMaxSpeedEnoughTime) {
-                OnRunMaxSpeed?.Invoke(this, currentSpeedAbs);
+                OnRunMaxSpeed?.Invoke(this, EventArgs.Empty);
+            } else if (currentSpeedAbs > _walkSpeed) {
+                OnRun?.Invoke(this, EventArgs.Empty);
             } else if (currentSpeedAbs > 0.01f) {
-                OnRun?.Invoke(this, currentSpeedAbs);
+                OnWalk?.Invoke(this, EventArgs.Empty);
             } else {
                 OnStop?.Invoke(this, EventArgs.Empty);
             }

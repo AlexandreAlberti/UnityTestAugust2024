@@ -7,11 +7,16 @@ namespace Blocks {
         private const string BLOCK_HIT = "BlockHit";
 
         [SerializeField] protected Animator _animator;
-        [SerializeField] protected ItemInBox _itemInBox;
         [SerializeField] private bool _isLateral;
 
+        protected bool _blockUsed;
+
+        private void Awake() {
+            _blockUsed = false;
+        }
+
         private void OnCollisionEnter2D(Collision2D collision) {
-            if (_isLateral) {
+            if (_isLateral || _blockUsed) {
                 return;
             }
 
@@ -23,7 +28,7 @@ namespace Blocks {
         }
 
         private void OnTriggerEnter2D(Collider2D collision) {
-            if (!_isLateral) {
+            if (!_isLateral || _blockUsed) {
                 return;
             }
 
@@ -35,8 +40,8 @@ namespace Blocks {
         }
 
         protected virtual void OnValidContact() {
-            _itemInBox.gameObject.SetActive(true);
             ActivateAnimator();
+            _blockUsed = true;
         }
 
         protected void ActivateAnimator() {

@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9056879213348210634, guid: 36a925c12beafef4da647046cda7c937, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -97,6 +101,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2006186681323638689, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5797351189641002357, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
       propertyPath: m_Name
       value: SurpriseBlockItemLeafOrMushroom
@@ -143,9 +151,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8340731072783984900, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
-    - {fileID: 6006229740314532745, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
-    - {fileID: 6294802779174386081, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
-    - {fileID: 1108614884435521466, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
     - {fileID: 2715472164652236117, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -156,40 +161,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5797351189641002357, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
       insertIndex: -1
       addedObject: {fileID: 11548470408699588}
-    - targetCorrespondingSourceObject: {fileID: 9171410476306035160, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3259408496611135458}
-    - targetCorrespondingSourceObject: {fileID: 5801726758291283562, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3845182617032166065}
-    - targetCorrespondingSourceObject: {fileID: 6599868734597597298, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4650247864189743783}
     - targetCorrespondingSourceObject: {fileID: 6212727406894686467, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2075760732658822670}
   m_SourcePrefab: {fileID: 100100000, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
---- !u!1 &445464831990864974 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6599868734597597298, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
-  m_PrefabInstance: {fileID: 6753686685665137724}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4650247864189743783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 445464831990864974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f528ce7c41f664b87c3ef38c00ad82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 8662000666044899515}
-  _itemInBox: {fileID: 2757963056293597590}
-  _isLateral: 1
-  _itemInBoxLittleMario: {fileID: 2849457680428899098}
 --- !u!4 &605856354080992278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6183870440494217258, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
@@ -216,27 +191,6 @@ MonoBehaviour:
   _prefabToIntantiate: {fileID: 7118708140008483537, guid: 8694ee59c0e7cd442aca5697cb4409e0, type: 3}
   _itemInBoxLittleMario: {fileID: 2849457680428899098}
   _prefabToIntantiateLittleMario: {fileID: 1451976183350140454, guid: 36a925c12beafef4da647046cda7c937, type: 3}
---- !u!1 &953133633505299030 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5801726758291283562, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
-  m_PrefabInstance: {fileID: 6753686685665137724}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3845182617032166065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 953133633505299030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f528ce7c41f664b87c3ef38c00ad82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 8662000666044899515}
-  _itemInBox: {fileID: 2757963056293597590}
-  _isLateral: 1
-  _itemInBoxLittleMario: {fileID: 2849457680428899098}
 --- !u!1 &994660493713369417 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5797351189641002357, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
@@ -256,27 +210,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _innerObjectAnimator: {fileID: 6824657343548599412}
   _boxedItemSO: {fileID: 11400000, guid: 2cf128c2ebea4964b97776bc068da74f, type: 2}
-  _boxedItemLittleMarioSO: {fileID: 11400000, guid: bb1aca7301592494a851eb46b06ca300, type: 2}
---- !u!1 &2521610614428624356 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9171410476306035160, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
-  m_PrefabInstance: {fileID: 6753686685665137724}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3259408496611135458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2521610614428624356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f528ce7c41f664b87c3ef38c00ad82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 8662000666044899515}
   _itemInBox: {fileID: 2757963056293597590}
-  _isLateral: 0
+  _boxedItemLittleMarioSO: {fileID: 11400000, guid: bb1aca7301592494a851eb46b06ca300, type: 2}
   _itemInBoxLittleMario: {fileID: 2849457680428899098}
 --- !u!114 &2757963056293597590 stripped
 MonoBehaviour:
@@ -292,10 +227,5 @@ MonoBehaviour:
 --- !u!95 &6824657343548599412 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 220649924954601544, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
-  m_PrefabInstance: {fileID: 6753686685665137724}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &8662000666044899515 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2705662770683491463, guid: 3a38108c8e5e7c14287d0a074ae09c31, type: 3}
   m_PrefabInstance: {fileID: 6753686685665137724}
   m_PrefabAsset: {fileID: 0}

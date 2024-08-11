@@ -1,7 +1,9 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Mario {
     public class MarioVisuals : MonoBehaviour {
+        private const string MARIO_WALK = "Walking";
         private const string MARIO_RUN = "Running";
         private const string MARIO_RUN_MAX_SPEED = "MaxSpeed";
         private const string MARIO_JUMP = "Jumping";
@@ -12,15 +14,13 @@ namespace Mario {
         [SerializeField] protected Animator _animator;
         [SerializeField] private SpriteRenderer _spriteRenderer;
 
-        protected bool _canChangeAnimatorSpeed;
-
         private void Awake() {
             SubsribeToAll();
-            _canChangeAnimatorSpeed = true;
         }
 
         protected void SubsribeToAll() {
             _marioMovement.OnStop += MarioMovement_OnStop;
+            _marioMovement.OnWalk += MarioMovement_OnWalk;
             _marioMovement.OnRun += MarioMovement_OnRun;
             _marioMovement.OnRunMaxSpeed += MarioMovement_OnRunMaxSpeed;
             _marioMovement.OnChangeDirection += MarioMovement_OnChangeDirection;
@@ -43,29 +43,31 @@ namespace Mario {
             _animator.SetBool(MARIO_CROUCH, false);
         }
 
-        private void MarioMovement_OnRun(object sender, float animationSpeed) {
-            if (_canChangeAnimatorSpeed) {
-                _animator.speed = Mathf.Max(1.0f, animationSpeed);
-            }
+        private void MarioMovement_OnWalk(object sender, System.EventArgs e) {
+            _animator.SetBool(MARIO_WALK, true);
+            _animator.SetBool(MARIO_RUN, false);
+            _animator.SetBool(MARIO_RUN_MAX_SPEED, false);
+            _animator.SetBool(MARIO_BREAK, false);
+            _animator.SetBool(MARIO_CROUCH, false);
+        }
 
+        private void MarioMovement_OnRun(object sender, System.EventArgs e) {
+            _animator.SetBool(MARIO_WALK, false);
             _animator.SetBool(MARIO_RUN, true);
             _animator.SetBool(MARIO_RUN_MAX_SPEED, false);
             _animator.SetBool(MARIO_BREAK, false);
             _animator.SetBool(MARIO_CROUCH, false);
         }
 
-        private void MarioMovement_OnRunMaxSpeed(object sender, float animationSpeed) {
-            if (_canChangeAnimatorSpeed) {
-                _animator.speed = animationSpeed;
-            }
-
-            _animator.speed = animationSpeed;
+        private void MarioMovement_OnRunMaxSpeed(object sender, System.EventArgs e) {
+            _animator.SetBool(MARIO_WALK, false);
             _animator.SetBool(MARIO_RUN, true);
             _animator.SetBool(MARIO_RUN_MAX_SPEED, true);
             _animator.SetBool(MARIO_CROUCH, false);
         }
 
         private void MarioMovement_OnStop(object sender, System.EventArgs e) {
+            _animator.SetBool(MARIO_WALK, false);
             _animator.SetBool(MARIO_RUN, false);
             _animator.SetBool(MARIO_RUN_MAX_SPEED, false);
             _animator.SetBool(MARIO_BREAK, false);

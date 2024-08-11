@@ -10,6 +10,7 @@ namespace Mario {
         [SerializeField] private float _flyTimeMax;
 
         public event EventHandler OnAttack;
+        public event EventHandler OnPlanning;
 
         private bool _isFlyAllowed;
         private bool _isSoftFallAllowed;
@@ -66,11 +67,10 @@ namespace Mario {
             if (_isFlyAllowed && _isJumpPressed && _flyTimer < _flyTimeMax) {
                 _flyImpulseTimer = 0.0f;
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * _flyImpulse);
-                Debug.Log("Flying");
             } else if (_isSoftFallAllowed && _isJumpPressed) {
                 _flyImpulseTimer = 0.0f;
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Vector2.up.y * _softFallImpulse);
-                Debug.Log("SoftFall");
+                OnPlanning?.Invoke(this, EventArgs.Empty);
             }
 
             _lastFrameJumpPressed = _isJumpPressed;

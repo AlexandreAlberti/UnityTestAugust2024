@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: _itemInBox
       value: 
       objectReference: {fileID: 8888759525621410992}
+    - target: {fileID: 6054594489009138224, guid: 18e2d5f23f64fde4d839a450fb076584, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6267733856432464019, guid: 18e2d5f23f64fde4d839a450fb076584, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -56,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6839748437981026619, guid: 18e2d5f23f64fde4d839a450fb076584, type: 3}
+      propertyPath: _itemInBox
+      value: 
+      objectReference: {fileID: 8888759525621410992}
     - target: {fileID: 9034155431530007882, guid: 18e2d5f23f64fde4d839a450fb076584, type: 3}
       propertyPath: m_Name
       value: SurpriseBlockItemCoin

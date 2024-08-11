@@ -1,3 +1,4 @@
+using Items;
 using UnityEngine;
 
 namespace Blocks {
@@ -8,8 +9,11 @@ namespace Blocks {
 
         [SerializeField] private Animator _innerObjectAnimator;
         [SerializeField] protected BoxedItemSO _boxedItemSO;
+        [SerializeField] protected ItemInBox _itemInBox;
+
         public virtual void OnHitAnimationEvent() {
             ActivateProperAnimator(_boxedItemSO);
+            _itemInBox.gameObject.SetActive(true);
         }
 
         protected void ActivateProperAnimator(BoxedItemSO boxedItemSO) {
