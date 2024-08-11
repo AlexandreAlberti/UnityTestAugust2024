@@ -4,7 +4,8 @@ using UnityEngine;
 namespace Items {
     public class MushroomMovement : MonoBehaviour {
 
-        [SerializeField] private float _speed;
+        private const float SPEED = 3.0f;
+
         [SerializeField] private Mushroom _mushroom;
 
         private float _currentSpeed;
@@ -18,7 +19,7 @@ namespace Items {
             transform.position += Vector3.right * _currentSpeed * Time.deltaTime;
         }
         public void Initialise(object ob, float marioPositionX) {
-            _currentSpeed = marioPositionX < transform.position.x ? _speed : -_speed;
+            _currentSpeed = marioPositionX < transform.position.x ? SPEED : -SPEED;
             _mushroom.OnMarioFound -= Initialise;
         }
 

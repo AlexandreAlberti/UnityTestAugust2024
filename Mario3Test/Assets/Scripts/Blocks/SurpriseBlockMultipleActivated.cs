@@ -3,7 +3,7 @@ using Mario;
 using UnityEngine;
 
 namespace Blocks {
-    public class RegularBlockMultipleActivated : RegularBlockActivated {
+    public class SurpriseBlockMultipleActivated : SurpriseBlockActivated {
 
         [SerializeField] private BoxedItemSO _boxedItemLittleMarioSO;
         [SerializeField] protected ItemInBox _itemInBoxLittleMario;

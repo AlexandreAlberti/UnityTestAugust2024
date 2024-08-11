@@ -1,4 +1,5 @@
 using Cinemachine;
+using Environment;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,11 +11,15 @@ namespace Mario {
         [SerializeField] private MarioVisuals _smallMario;
         [SerializeField] private BigMarioVisuals _bigMario;
         [SerializeField] private TanookiMarioVisuals _tanookiMario;
-        [SerializeField] private MarioState _marioState;
         [SerializeField] private InitialPosition _initialPosition;
+
+        private MarioState _marioState;
 
         private void Awake() {
             Instance = this;
+
+            _marioState = MarioState.LittleMario;
+
             UpdateActiveMario();
         }
 

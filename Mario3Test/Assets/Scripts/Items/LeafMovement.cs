@@ -5,8 +5,8 @@ namespace Items {
     public class LeafMovement : MonoBehaviour {
 
         private const string START_ANIMATION = "StartAnimation";
-
-        [SerializeField] private float _fallSpeed;
+        private const float FALL_SPEED = 1.5f;
+        
         [SerializeField] private Leaf _leaf;
         [SerializeField] private Animator _leafAnimator;
 
@@ -22,7 +22,7 @@ namespace Items {
                 return;
             }
 
-            transform.position += Vector3.down * (_fallSpeed * Time.deltaTime);
+            transform.position += Vector3.down * (FALL_SPEED * Time.deltaTime);
 
         }
 

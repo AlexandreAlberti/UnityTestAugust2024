@@ -2,7 +2,7 @@ using Items;
 using UnityEngine;
 
 namespace Blocks {
-    public class RegularBlockActivated : MonoBehaviour {
+    public class SurpriseBlockActivated : MonoBehaviour {
         private const string GROW_AND_STAY = "GrowAndStay";
         private const string JUMP_AND_AUTO_COLLECT = "JumpAndAutoCollect";
         private const string JUMP_AND_GRACEFULLY_FALL = "JumpAndGracefullyFall";

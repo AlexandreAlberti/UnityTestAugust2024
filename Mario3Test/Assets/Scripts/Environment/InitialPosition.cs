@@ -1,4 +1,6 @@
 using UnityEngine;
 
-public class InitialPosition : MonoBehaviour {
+namespace Environment {
+    public class InitialPosition : MonoBehaviour {
+    }
 }
